@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:12px;
+	text-shadow: 0px 1px 0px #FFFFFF;
+	}
+
+div#header{
+	position:relative;
+	width:760;
+	height:0 auto;
+	background-color:#E5E5E5;
+	z-index:0;
+	}
+	
+div#header_sav{
+	position:absolute;
+	height:56;
+	width:500;
+	background-color:#CCC;
+	z-index:-10;
+	border-radius: 5px;	
+	}
+	
+div#header_sav_admin{
+	position:absolute;
+	height:56;
+	width:630;
+	background-color:#CCC;
+	z-index:-10;
+	border-radius: 5px;
+	}
+
+div#tablazatBG{
+	width:700;
+	height:0 auto;
+	margin:0 auto;
+	background-color:#C9C9C9;
+	vertical-align:central;
+	padding-bottom:20;
+	padding-top:20;
+	padding-left:10;
+	padding-right:10;
+	border-radius: 5px;
+	}
+	
+div#appBG{
+	width:760;
+	background-color:#E5E5E5;
+	padding-bottom:20;
+	padding-top:20;
+	}
+	
+div#addBG{
+	width:760;
+	background-color:#E5E5E5;
+	padding-bottom:20;
+	padding-top:20;
+	}
+	
+div#addsomething{
+	margin-bottom:10;
+	height:0 auto;
+	width:680;
+	background-color:#CCC;
+	border-radius: 5px;
+	padding-top:10;
+	padding-bottom:10;
+	}
+
+table#Tablazat_orarend{
+	margin-top:10;
+	background-color:#C9C9C9;
+	border-width:1;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:12px;
+	}
+
+h2{
+	margin-top:0;
+	font-weight:bold; 
+	text-align:left; 
+	padding-left:20;
+	padding-top:20;
+	text-shadow: 0px 1px 0px #FFFFFF;
+	 }
+
+h3{
+	margin-top:0;
+	font-weight:normal; 
+	text-align:left; 
+	padding-left:20;
+	text-shadow: 0px 1px 0px #FFFFFF;
+	 }
+
+h4{
+	text-align:right;
+	margin:0;
+	margin-right:40;
+	padding:0;
+	text-shadow: 0px 1px 0px #FFFFFF;
+	}
+
+h1{
+	margin:0;
+	font-size:20px;
+	text-shadow: 0px 1px 0px #FFFFFF;
+	}
+	 
+
+
+
+
