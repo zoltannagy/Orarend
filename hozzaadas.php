@@ -29,7 +29,7 @@
                                  <table>
                                 <td>
                                 <tr><h2>Tantárgy hozzáadása az adatbázishoz:</h2></tr>
-                                 <tr><h3>Név:<input type="text" size="45" name="tantargy" placeholder="Tantárgy"></input></h3></tr>
+                                 <tr><h3>Név:<input type="text" size="45" name="tantargy" placeholder="Kérem írja ide a tantárgy nevét."></input></h3></tr>
 
                                 <tr><h4><input type="image" src="images/GUI_06.jpg" width="120"/></h4></tr>
                                 </td>
@@ -58,11 +58,25 @@
                                 <tr><h4><input type="image" src="images/GUI_06.jpg" width="120"/></h4></tr>
                                 </td>
                                 </table>
-                                </div>    
+                                </div>
+                             </form>
+                            <form action="adminhozzaad.php" method="post">
+                                <div id="addsomething">
+                                <table>
+                                <td>
+                                <tr><h2>Admin hozzáadása az adatbázishoz:</h2></tr>
+                                <tr><h3>Név:<input type="text" name="nev" size="30" placeholder="Kérem írja ide az Admin nevét."></input></h3></tr>
+                                <tr><h3>Felhasználói név:<input type="text" name="felhasznalonev"size="50" placeholder="Felhasználói név(Maximum 50 karakter!)."></input></h3></tr>
+                                <tr><h3>Jelszo:<input type="password" name="jelszo"size="30" placeholder="Jelszó(Maximum 12 karakter!)."></input></h3></tr>
+                                <tr><h4><input type="image" src="images/GUI_06.jpg" width="120"/></h4></tr>
+                                </td>
+                                </table>
+                                </div>
+                                
+                            </form>
                                 <div id="addsomething">      
                                 <a href="admin.php"><img src="images/vissza_06.jpg" width="120"></img></a></div	>
                                 </div>
-                            </form>
 			<img src="images/bottom_element.jpg" width="760"></img>
 </center>
 
