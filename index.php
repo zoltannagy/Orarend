@@ -8,7 +8,7 @@
         <a href="admin.php">admin</a>
         <a href="diakfelulet.php">diak</a>
         <a href="tanari.php">tanar</a>
-        <a href="orarend..php">orarend</a>
+        <a href="orarend.php">orarend</a>
         
     </body>
 </html>

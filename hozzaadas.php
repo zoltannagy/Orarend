@@ -74,6 +74,78 @@
                                 </div>
                                 
                             </form>
+                            <form action="orahozzaad.php" method="post">
+                                <div id="addsomething">
+                                <table>
+                                    <?php
+                                        $adatbazis=@mysql_connect("localhost","root","") or die("Nem sikerült kapcsolódni az adatbázishoz!<br/>");
+                                        $db=mysql_select_db("neptun",$adatbazis) or die("Nem sikerült csatlakozni a megadott adatbázishoz</br>");
+                                    ?>
+                                <td>
+                                <tr><h2>Óra hozzáadása az adatbázishoz:</h2></tr>
+                                <tr>
+                                <select name="">
+                                    <?php
+                                    
+                                            $eredmeny=mysql_query("SELECT * FROM osztaly");
+                                            while($r=mysql_fetch_assoc($eredmeny)){
+                                                echo "<option value=".$r['id']."}>".$r['nev']."</option>\n";
+                                                }
+                                    ?>
+                                    </select>
+                                </tr>
+                                <tr>
+                                <select name="">
+                                    <?php
+                                            mysql_query('SET NAMES utf8');
+                                            $eredmeny=mysql_query("SELECT * FROM nap");
+                                            while($r=mysql_fetch_assoc($eredmeny)){
+                                                echo "<option value=".$r['id']."}>".$r['nev']."</option>\n";
+                                                }
+                                    ?>
+                                    </select>
+                                <select name="">
+                                    <?php
+                                            $eredmeny=mysql_query("SELECT * FROM ora");
+                                            while($r=mysql_fetch_assoc($eredmeny)){
+                                                echo "<option value=".$r['id']."}>".$r['kezdes']."-".$r['befejezes']."</option>\n";
+                                                }
+                                    ?>
+                                    </select>
+                                </tr><br/>
+                                <tr>
+                                <select name="">
+                                    <?php
+                                            $eredmeny=mysql_query("SELECT * FROM tantargy");
+                                            while($r=mysql_fetch_assoc($eredmeny)){
+                                                echo "<option value=".$r['id']."}>".$r['nev']."</option>\n";
+                                                }
+                                    ?>
+                                    </select>
+                                <select name="">
+                                    <?php
+											mysql_query('SET NAMES utf8_hungarian_ci');
+                                            $eredmeny=mysql_query("SELECT * FROM tanar");
+                                            while($r=mysql_fetch_assoc($eredmeny)){
+                                                echo "<option value=".$r['id']."}>".$r['nev_elotag']." ".$r['vezeteknev']." ".$r['keresztnev']."</option>\n";
+                                                }
+                                    ?>
+                                    </select>
+                                <select name="">
+                                    <?php
+                                            $eredmeny=mysql_query("SELECT * FROM tanterem");
+                                            while($r=mysql_fetch_assoc($eredmeny)){
+                                                echo "<option value=".$r['id']."}>".$r['nev']."</option>\n";
+                                                }
+                                    ?>
+                                    </select>
+                                </tr>
+                                <tr><h4><input type="image" src="images/GUI_06.jpg" width="120"/></h4></tr>
+                                </td>
+                                </table>
+                                </div>
+                                
+                            </form>
                                 <div id="addsomething">      
                                 <a href="admin.php"><img src="images/vissza_06.jpg" width="120"></img></a></div	>
                                 </div>

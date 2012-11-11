@@ -9,22 +9,19 @@
 header('Content-Type: text/html; charset=UTF-8');
 $error=0;
 $adatbazis=@mysql_connect("localhost","root","") or die("Nem sikerült kapcsolódni az adatbázishoz!<br/>");
-$db=mysql_select_db("neptun",$adatbazis) or die("Nem</br>");
-
-
+$db=mysql_select_db("neptun",$adatbazis) or die("Nem sikerült csatlakozni a megadott adatbázishoz</br>");
                 
                 
-$sql="INSERT INTO osztaly (nev)
+$sql="INSERT INTO orarend (osztalyid, napid, oraid, tantargyid, tanarid, tanteremid)
 VALUES
-('$_POST[szak]')";
+('$_POST[osztalyid]','$_POST[napid]','$_POST[oraid]','$_POST[tantargyid]','$_POST[tanarid]','$_POST[tanteremid]')";
 
 if (!mysql_query($sql,$adatbazis))
   {
   $error=1;
   die('Error: ' . mysql_error());
-  }
-  
-  if ($error==0){
+  } 
+if ($error==0){
     echo "<script type='text/javascript'>
             alert('Sikeres hozzáadás');
             document.location = 'hozzaadas.php';
@@ -37,8 +34,6 @@ if (!mysql_query($sql,$adatbazis))
          
 mysql_close($adatbazis);
 
-
 ?>
-        <a href="hozzaadas.php"><input type="submit" value="Visszatér!"/></a>
     </body>
 </html>

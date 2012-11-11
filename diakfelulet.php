@@ -5,6 +5,10 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <?php
+        $adatbazis=@mysql_connect("localhost","root","") or die("Nem sikerült kapcsolódni az adatbázishoz!<br/>");
+        $db=mysql_select_db("neptun",$adatbazis) or die("Nem sikerült csatlakozni a megadott adatbázishoz</br>");
+    ?>
 <center>
 			<img src="images/top_element_regular.jpg" width="760"></img>
 			<center><div id="header">
@@ -25,11 +29,16 @@
             <table border="2" cellspacing="0" cellpadding="10" id="Tablazat_orarend">
             
             <!--Nulladik sor-->
-      	    <center><tr colspan="9"><b>Kérem válassza ki az osztályt:</b>
-            <select id="Osztaly">  <option value="Osztaly1">Osztaly1</option>
-  			<option value="Osztaly2">Osztaly2</option>
-  			<option value="Osztaly3">Osztaly3</option>
-  			<option value="Osztaly4">Osztaly4</option></select>
+      	    <center><tr colspan="9">
+                <b>Kérem válassza ki az osztályt:</b>
+                <select id="Osztaly">  
+                <?php
+                    $eredmeny=mysql_query("SELECT * FROM osztaly");
+                    while($r=mysql_fetch_assoc($eredmeny)){
+                        echo "<option value=".$r['id']."}>".$r['nev']."</option>\n";
+                        }
+                ?>
+            </select>
             </tr></center>
             <!--Első sor-->
             <tr>
@@ -48,8 +57,16 @@
             </th>
             <!--Második sor-->  
             <tr>
-            <th>&nbsp;</th>
-            <td> <b>Tantárgy:</br></b>
+            <th>8:00-8:45</th>
+            <td>
+                <b>Tantárgy:
+					<?php
+						$eredmeny=mysql_query("SELECT tantargy.nev FROM orarend,osztaly,tantargy WHERE orarend.osztalyid=osztaly.id AND tantargy.id=orarend.tantargyid;");
+                    while($r=mysql_fetch_assoc($eredmeny)){
+                        echo ($r['tantargy.nev']);
+                        }
+                    ?>
+                </br></b>
             Tanár: </br>
             <i>Tanterem: </br></i>
             </td>
@@ -64,7 +81,7 @@
             <i>Tanterem: </br></i>
             </td>
             <td>
-            <b>Tantárgy:</br></b>
+            <b>Tantárgy:</b></br>
             Tanár: </br>
             <i>Tanterem: </br></i>
             </td>
@@ -76,7 +93,7 @@
             </tr>           
             <!--Harmadi sor-->
                         <tr>
-            <th>&nbsp;</th>
+            <th>9:00-9:45</th>
             <td> <b>Tantárgy:</br></b>
             Tanár: </br>
             <i>Tanterem: </br></i>
@@ -104,7 +121,7 @@
             </tr>    
             <!--Negyedik sor-->
                         <tr>
-            <th>
+            <th>10:00-10:45
             <td> <b>Tantárgy:</br></b>
             Tanár: </br>
             <i>Tanterem: </br></i>
@@ -132,7 +149,7 @@
             </tr>    
             <!--Ötödik sor-->
                         <tr>
-            <th>&nbsp;</th>
+            <th>11:00-11:45</th>
             <td> <b>Tantárgy:</br></b>
             Tanár: </br>
             <i>Tanterem: </br></i>
@@ -160,7 +177,7 @@
             </tr>       
             <!--Hetedik sor-->
                         <tr>
-            <th>&nbsp;</th>
+            <th>12:00-12:45</th>
             <td> <b>Tantárgy:</br></b>
             Tanár: </br>
             <i>Tanterem: </br></i>
@@ -188,7 +205,63 @@
             </tr>     
             <!--Nyolcadik sor-->
                         <tr>
-            <th>&nbsp;</th>
+            <th>13:00-13:45</th>
+            <td> <b>Tantárgy:</br></b>
+            Tanár: </br>
+            <i>Tanterem: </br></i>
+            </td>
+            <td>
+            <b>Tantárgy:</br></b>
+            Tanár: </br>
+            <i>Tanterem: </br></i>
+            </td>
+            <td>
+            <b>Tantárgy:</br></b>
+            Tanár: </br>
+            <i>Tanterem: </br></i>
+            </td>
+            <td>
+            <b>Tantárgy:</br></b>
+            Tanár: </br>
+            <i>Tanterem: </br></i>
+            </td>
+            <td>
+            <b>Tantárgy:</br></b>
+            Tanár: </br>
+            <i>Tanterem: </br></i>
+            </td>
+            </tr>
+            <!--Kilencedik sor-->
+                        <tr>
+            <th>14:00-14:45</th>
+            <td> <b>Tantárgy:</br></b>
+            Tanár: </br>
+            <i>Tanterem: </br></i>
+            </td>
+            <td>
+            <b>Tantárgy:</br></b>
+            Tanár: </br>
+            <i>Tanterem: </br></i>
+            </td>
+            <td>
+            <b>Tantárgy:</br></b>
+            Tanár: </br>
+            <i>Tanterem: </br></i>
+            </td>
+            <td>
+            <b>Tantárgy:</b></br>
+            Tanár: </br>
+            <i>Tanterem: </br></i>
+            </td>
+            <td>
+            <b>Tantárgy:</br></b>
+            Tanár: </br>
+            <i>Tanterem: </br></i>
+            </td>                         
+            </tr>   
+            <!--Tizedik sor-->
+                        <tr>
+            <th>15:00-15:45</th>
             <td> <b>Tantárgy:</br></b>
             Tanár: </br>
             <i>Tanterem: </br></i>
@@ -213,8 +286,7 @@
             Tanár: </br>
             <i>Tanterem: </br></i>
             </td>                        
-            </tr>    
-
+            </tr>       
             </table></div>
             		
             </div>
