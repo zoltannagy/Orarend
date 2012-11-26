@@ -13,28 +13,22 @@ $db=mysql_select_db("neptun",$adatbazis) or die("Nem</br>");
 
 
                 
-                
+mysql_query('SET NAMES utf8');                
 $sql="INSERT INTO osztaly (nev)
 VALUES
 ('$_POST[szak]')";
 
 if (!mysql_query($sql,$adatbazis))
   {
-  $error=1;
   die('Error: ' . mysql_error());
   }
   
-  if ($error==0){
+
     echo "<script type='text/javascript'>
             alert('Sikeres hozzáadás');
             document.location = 'hozzaadas.php';
          </script>";
-    }else{echo "<script type='text/javascript'>
-            alert('Sikertelen hozzáadás');
-            document.location = 'hozzaadas.php';
-         </script>";
-         }
-         
+
 mysql_close($adatbazis);
 
 

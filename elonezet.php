@@ -10,27 +10,20 @@
         $db=mysql_select_db("neptun",$adatbazis) or die("Nem sikerült csatlakozni a megadott adatbázishoz</br>");
     ?>
 <center>
-			<img src="images/top_element_regular.jpg" width="760"></img>
+            <img src="images/top_element_regular.jpg" width="760"></img>
 			<center><div id="header" style="height:500px;">
-            <table cellspacing="10">
-            <tr>
-            <td><div id="header_sav"></div><img src="images/orarend_06.gif"></img></td>
-            
-            <td><a href="login.php"><img src="images/GUI_login.jpg" width="120"></img></a></td>
-            </tr> 
-            </table>
-            <br/><br/><br/><br/><br/>
+            <br/><br/>
             <table>
             <tr>
             <div id="addsomething">
             <h4>Kérem válassza ki az alábbi listából azt az osztályt,amelyiknek meg szeretné tekinteni az Órarendjét!</h4>
-            <form action="diakorarend.php" method="post">
+            <form action="orarendelonezet.php" method="post">
             <select name="osztalyid">
                                     <?php
 											mysql_query('SET NAMES utf8');
 									        $eredmeny=mysql_query("SELECT * FROM osztaly");
                                             while($r=mysql_fetch_assoc($eredmeny)){
-                                                echo "<option value=".$r['id']."}>".$r['nev']."</option>\n";
+                                                echo "<option value=".$r['id'].">".$r['nev']."</option>\n";
                                                 }
                                     ?>
                                     </select>
@@ -39,12 +32,16 @@
             </div>
             </tr>
             </table>
-         	
-            </div> </center>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+         	<div id="addsomething">      
+                                <a href="admin.php"><img src="images/vissza_06.jpg" width="120"></img></a></div	>
+            </div>
+             </center>
 			
             
             
             <img src="images/bottom_element.jpg" width="760"></img></br>
+            <a href="index.php">Vissza az Index-re</a>
 </center>
 
 </body>
