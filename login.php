@@ -4,11 +4,11 @@ require 'Classes/class.Session.php';
 require 'Classes/class.Login.php';
 $database = new mysqli('localhost', 'root', '', 'neptun');
 // Ha a post ki van töltve...
-if(isset($_POST['loginsubmit'])){
+if(isset(mysql_real_escape_string($_POST['loginsubmit']))){
     // ...példányosít egy új $login-t...
-    $login = new Login($database, $_POST['username'], $_POST['password']);
+    $login = new Login($database, mysql_real_escape_string($_POST['username']), mysql_real_escape_string($_POST['password']));
     // ...majd meghívja a login() metódust!
-	$_SESSION['user'] = $_POST['username'];
+	$_SESSION['user'] = mysql_real_escape_string($_POST['username']);
     $login->Login();
 }
 	

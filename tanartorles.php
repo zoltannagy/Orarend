@@ -10,7 +10,7 @@ $adatbazis=@mysql_connect("localhost","root","") or die("Nem sikerült kapcsoló
 $db=mysql_select_db("neptun",$adatbazis) or die("Nem</br>");
                 
                 
-$sql=("DELETE FROM `tanar` WHERE id='$_POST[tanar]' LIMIT 1;");
+$sql=("DELETE FROM `tanar` WHERE id='mysql_real_escape_string($_POST[tanar])' LIMIT 1;");
 
 if (!mysql_query($sql,$adatbazis))
   {

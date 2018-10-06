@@ -9,13 +9,13 @@
 $adatbazis=@mysql_connect("localhost","root","") or die("Nem sikerült kapcsolódni a központi adatbázishoz!<br/>");
 $db=mysql_select_db("neptun",$adatbazis) or die("Nem sikerült kapcsolódni a megadott adatbázishoz!</br>");
 
-$jelszo=$_POST['tjelszo'];
+$jelszo=mysql_real_escape_string($_POST['tjelszo']);
 $enc_jelszo=md5($jelszo);
                 
 mysql_query('SET NAMES utf8');                
 $sql="INSERT INTO tanar (nev, felhasznalonev, jelszo)
 VALUES
-('$_POST[tnev]','$_POST[tfelhasznalonev]','$enc_jelszo')";
+('mysql_real_escape_string($_POST[tnev])','mysql_real_escape_string($_POST[tfelhasznalonev])','$enc_jelszo')";
 
 if (!mysql_query($sql,$adatbazis))
   {

@@ -16,7 +16,7 @@ $db=mysql_select_db("neptun",$adatbazis) or die("Nem</br>");
 mysql_query('SET NAMES utf8');                
 $sql="INSERT INTO osztaly (nev)
 VALUES
-('$_POST[szak]')";
+('mysql_real_escape_string($_POST[szak])')";
 
 if (!mysql_query($sql,$adatbazis))
   {

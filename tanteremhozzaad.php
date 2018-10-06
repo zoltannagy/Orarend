@@ -10,7 +10,7 @@ $adatbazis=@mysql_connect("localhost","root","") or die("Nem sikerült kapcsoló
 $db=mysql_select_db("neptun",$adatbazis) or die("Nem</br>");
                 
 mysql_query('SET NAMES UTF8');               
-$sql="INSERT INTO tanterem (nev) VALUES ('$_POST[tanterem]')";
+$sql="INSERT INTO tanterem (nev) VALUES ('mysql_real_escape_string($_POST[tanterem])')";
 
 if (!mysql_query($sql,$adatbazis))
   {
