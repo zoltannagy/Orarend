@@ -9,13 +9,13 @@
 $adatbazis=@mysql_connect("localhost","root","") or die("Nem sikerült kapcsolódni az adatbázishoz!<br/>");
 $db=mysql_select_db("neptun",$adatbazis) or die("Nem sikerült csatlakozni a megadott adatbázishoz</br>");
 
-$jelszo=$_POST['ajelszo'];
+$jelszo=mysql_real_escape_string($_POST['ajelszo']);
 $enc_jelszo=md5($jelszo);
 
 mysql_query('SET NAMES utf8');                
 $sql="INSERT INTO admin (nev, felhasznalonev, jelszo)
 VALUES
-('$_POST[anev]','$_POST[afelhasznalonev]','$enc_jelszo')";
+('mysql_real_escape_string($_POST[anev])','mysql_real_escape_string($_POST[afelhasznalonev])','$enc_jelszo')";
 
 if (!mysql_query($sql,$adatbazis))
   {

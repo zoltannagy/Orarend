@@ -12,7 +12,7 @@ $db=mysql_select_db("neptun",$adatbazis) or die("Nem</br>");
 mysql_query('SET NAMES utf8');               
 $sql="INSERT INTO tantargy (nev)
 VALUES
-('$_POST[tantargy]')";
+('mysql_real_escape_string($_POST[tantargy])')";
 
 if (!mysql_query($sql,$adatbazis))
   {
