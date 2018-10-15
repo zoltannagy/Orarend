@@ -22,7 +22,7 @@
            <h3><b> A(z)
 		   		<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT nev FROM osztaly WHERE osztaly.id='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT nev FROM osztaly WHERE osztaly.id='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -50,7 +50,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='1' AND orarend.oraid='1' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='1' AND orarend.oraid='1' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -58,7 +58,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='1' AND orarend.oraid='1' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='1' AND orarend.oraid='1' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -67,7 +67,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='1' AND orarend.oraid='1' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='1' AND orarend.oraid='1' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -77,7 +77,7 @@
 <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='2' AND orarend.oraid='1' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='2' AND orarend.oraid='1' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -85,7 +85,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='2' AND orarend.oraid='1' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='2' AND orarend.oraid='1' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -94,7 +94,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='2' AND orarend.oraid='1' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='2' AND orarend.oraid='1' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -104,7 +104,7 @@
 <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='3' AND orarend.oraid='1' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='3' AND orarend.oraid='1' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -112,7 +112,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='3' AND orarend.oraid='1' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='3' AND orarend.oraid='1' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -121,7 +121,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='3' AND orarend.oraid='1' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='3' AND orarend.oraid='1' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -131,7 +131,7 @@
            <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='4' AND orarend.oraid='1' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='4' AND orarend.oraid='1' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -139,7 +139,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='4' AND orarend.oraid='1' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='4' AND orarend.oraid='1' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -148,7 +148,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='4' AND orarend.oraid='1' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='4' AND orarend.oraid='1' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -158,7 +158,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='5' AND orarend.oraid='1' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='5' AND orarend.oraid='1' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -166,7 +166,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='5' AND orarend.oraid='1' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='5' AND orarend.oraid='1' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -175,7 +175,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='5' AND orarend.oraid='1' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='5' AND orarend.oraid='1' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -190,7 +190,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='1' AND orarend.oraid='2' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='1' AND orarend.oraid='2' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -198,7 +198,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='1' AND orarend.oraid='2' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='1' AND orarend.oraid='2' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -207,7 +207,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='1' AND orarend.oraid='2' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='1' AND orarend.oraid='2' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -217,7 +217,7 @@
            <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='2' AND orarend.oraid='2' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='2' AND orarend.oraid='2' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -225,7 +225,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='2' AND orarend.oraid='2' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='2' AND orarend.oraid='2' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -234,7 +234,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='2' AND orarend.oraid='2' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='2' AND orarend.oraid='2' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -244,7 +244,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='3' AND orarend.oraid='2' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='3' AND orarend.oraid='2' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -252,7 +252,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='3' AND orarend.oraid='2' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='3' AND orarend.oraid='2' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -261,7 +261,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='3' AND orarend.oraid='2' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='3' AND orarend.oraid='2' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -271,7 +271,7 @@
            <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='4' AND orarend.oraid='2' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='4' AND orarend.oraid='2' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -279,7 +279,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='4' AND orarend.oraid='2' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='4' AND orarend.oraid='2' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -288,7 +288,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='4' AND orarend.oraid='2' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='4' AND orarend.oraid='2' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -298,7 +298,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='5' AND orarend.oraid='2' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='5' AND orarend.oraid='2' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -306,7 +306,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='5' AND orarend.oraid='2' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='5' AND orarend.oraid='2' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -315,7 +315,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='5' AND orarend.oraid='2' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='5' AND orarend.oraid='2' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -329,7 +329,7 @@
 <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='1' AND orarend.oraid='3' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='1' AND orarend.oraid='3' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -337,7 +337,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='1' AND orarend.oraid='3' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='1' AND orarend.oraid='3' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -346,7 +346,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='1' AND orarend.oraid='3' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='1' AND orarend.oraid='3' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -356,7 +356,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='2' AND orarend.oraid='3' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='2' AND orarend.oraid='3' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -364,7 +364,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='2' AND orarend.oraid='3' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='2' AND orarend.oraid='3' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -373,7 +373,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='2' AND orarend.oraid='3' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='2' AND orarend.oraid='3' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -383,7 +383,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='3' AND orarend.oraid='3' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='3' AND orarend.oraid='3' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -391,7 +391,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='3' AND orarend.oraid='3' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='3' AND orarend.oraid='3' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -400,7 +400,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='3' AND orarend.oraid='3' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='3' AND orarend.oraid='3' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -410,7 +410,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='4' AND orarend.oraid='3' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='4' AND orarend.oraid='3' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -418,7 +418,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='4' AND orarend.oraid='3' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='4' AND orarend.oraid='3' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -427,7 +427,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='4' AND orarend.oraid='3' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='4' AND orarend.oraid='3' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -437,7 +437,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='5' AND orarend.oraid='3' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='5' AND orarend.oraid='3' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -445,7 +445,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='5' AND orarend.oraid='3' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='5' AND orarend.oraid='3' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -454,7 +454,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='5' AND orarend.oraid='3' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='5' AND orarend.oraid='3' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -469,7 +469,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='1' AND orarend.oraid='4' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='1' AND orarend.oraid='4' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -477,7 +477,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='1' AND orarend.oraid='4' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='1' AND orarend.oraid='4' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -486,7 +486,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='1' AND orarend.oraid='4' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='1' AND orarend.oraid='4' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -496,7 +496,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='2' AND orarend.oraid='4' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='2' AND orarend.oraid='4' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -504,7 +504,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='2' AND orarend.oraid='4' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='2' AND orarend.oraid='4' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -513,7 +513,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='2' AND orarend.oraid='4' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='2' AND orarend.oraid='4' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -523,7 +523,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='3' AND orarend.oraid='4' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='3' AND orarend.oraid='4' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -531,7 +531,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='3' AND orarend.oraid='4' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='3' AND orarend.oraid='4' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -540,7 +540,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='3' AND orarend.oraid='4' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='3' AND orarend.oraid='4' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -550,7 +550,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='4' AND orarend.oraid='4' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='4' AND orarend.oraid='4' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -558,7 +558,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='4' AND orarend.oraid='4' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='4' AND orarend.oraid='4' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -567,7 +567,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='4' AND orarend.oraid='4' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='4' AND orarend.oraid='4' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -577,7 +577,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='5' AND orarend.oraid='4' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='5' AND orarend.oraid='4' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -585,7 +585,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='5' AND orarend.oraid='4' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='5' AND orarend.oraid='4' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -594,7 +594,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='5' AND orarend.oraid='4' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='5' AND orarend.oraid='4' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -609,7 +609,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='1' AND orarend.oraid='5' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='1' AND orarend.oraid='5' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -617,7 +617,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='1' AND orarend.oraid='5' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='1' AND orarend.oraid='5' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -626,7 +626,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='1' AND orarend.oraid='5' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='1' AND orarend.oraid='5' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -636,7 +636,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='2' AND orarend.oraid='5' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='2' AND orarend.oraid='5' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -644,7 +644,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='2' AND orarend.oraid='5' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='2' AND orarend.oraid='5' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -653,7 +653,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='2' AND orarend.oraid='5' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='2' AND orarend.oraid='5' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -663,7 +663,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='3' AND orarend.oraid='5' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='3' AND orarend.oraid='5' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -671,7 +671,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='3' AND orarend.oraid='5' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='3' AND orarend.oraid='5' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -680,7 +680,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='3' AND orarend.oraid='5' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='3' AND orarend.oraid='5' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -690,7 +690,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='4' AND orarend.oraid='5' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='4' AND orarend.oraid='5' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -698,7 +698,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='4' AND orarend.oraid='5' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='4' AND orarend.oraid='5' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -707,7 +707,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='4' AND orarend.oraid='5' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='4' AND orarend.oraid='5' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -717,7 +717,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='5' AND orarend.oraid='5' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='5' AND orarend.oraid='5' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -725,7 +725,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='5' AND orarend.oraid='5' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='5' AND orarend.oraid='5' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -734,7 +734,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='5' AND orarend.oraid='5' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='5' AND orarend.oraid='5' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -749,7 +749,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='1' AND orarend.oraid='6' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='1' AND orarend.oraid='6' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -757,7 +757,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='1' AND orarend.oraid='6' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='1' AND orarend.oraid='6' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -766,7 +766,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='1' AND orarend.oraid='6' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='1' AND orarend.oraid='6' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -776,7 +776,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='2' AND orarend.oraid='6' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='2' AND orarend.oraid='6' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -784,7 +784,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='2' AND orarend.oraid='6' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='2' AND orarend.oraid='6' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -793,7 +793,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='2' AND orarend.oraid='6' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='2' AND orarend.oraid='6' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -803,7 +803,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='3' AND orarend.oraid='6' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='3' AND orarend.oraid='6' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -811,7 +811,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='3' AND orarend.oraid='6' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='3' AND orarend.oraid='6' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -820,7 +820,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='3' AND orarend.oraid='6' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='3' AND orarend.oraid='6' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -830,7 +830,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='4' AND orarend.oraid='6' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='4' AND orarend.oraid='6' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -838,7 +838,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='4' AND orarend.oraid='6' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='4' AND orarend.oraid='6' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -847,7 +847,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='4' AND orarend.oraid='6' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='4' AND orarend.oraid='6' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -857,7 +857,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='5' AND orarend.oraid='6' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='5' AND orarend.oraid='6' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -865,7 +865,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='5' AND orarend.oraid='6' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='5' AND orarend.oraid='6' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -874,7 +874,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='5' AND orarend.oraid='6' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='5' AND orarend.oraid='6' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -889,7 +889,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='1' AND orarend.oraid='7' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='1' AND orarend.oraid='7' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -897,7 +897,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='1' AND orarend.oraid='7' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='1' AND orarend.oraid='7' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -906,7 +906,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='1' AND orarend.oraid='7' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='1' AND orarend.oraid='7' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -916,7 +916,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='2' AND orarend.oraid='7' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='2' AND orarend.oraid='7' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -924,7 +924,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='2' AND orarend.oraid='7' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='2' AND orarend.oraid='7' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -933,7 +933,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='2' AND orarend.oraid='7' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='2' AND orarend.oraid='7' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -943,7 +943,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='3' AND orarend.oraid='7' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='3' AND orarend.oraid='7' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -951,7 +951,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='3' AND orarend.oraid='7' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='3' AND orarend.oraid='7' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -960,7 +960,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='3' AND orarend.oraid='7' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='3' AND orarend.oraid='7' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -970,7 +970,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='4' AND orarend.oraid='7' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='4' AND orarend.oraid='7' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -978,7 +978,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='4' AND orarend.oraid='7' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='4' AND orarend.oraid='7' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -987,7 +987,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='4' AND orarend.oraid='7' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='4' AND orarend.oraid='7' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -997,7 +997,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='5' AND orarend.oraid='7' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='5' AND orarend.oraid='7' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -1005,7 +1005,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='5' AND orarend.oraid='7' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='5' AND orarend.oraid='7' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -1014,7 +1014,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='5' AND orarend.oraid='7' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='5' AND orarend.oraid='7' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -1029,7 +1029,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='1' AND orarend.oraid='8' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='1' AND orarend.oraid='8' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -1037,7 +1037,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='1' AND orarend.oraid='8' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='1' AND orarend.oraid='8' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -1046,7 +1046,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='1' AND orarend.oraid='8' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='1' AND orarend.oraid='8' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -1056,7 +1056,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='2' AND orarend.oraid='8' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='2' AND orarend.oraid='8' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -1064,7 +1064,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='2' AND orarend.oraid='8' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='2' AND orarend.oraid='8' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -1073,7 +1073,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='2' AND orarend.oraid='8' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='2' AND orarend.oraid='8' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -1083,7 +1083,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='3' AND orarend.oraid='8' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='3' AND orarend.oraid='8' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -1091,7 +1091,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='3' AND orarend.oraid='8' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='3' AND orarend.oraid='8' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -1100,7 +1100,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='3' AND orarend.oraid='8' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='3' AND orarend.oraid='8' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -1110,7 +1110,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='4' AND orarend.oraid='8' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='4' AND orarend.oraid='8' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -1118,7 +1118,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='4' AND orarend.oraid='8' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='4' AND orarend.oraid='8' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -1127,7 +1127,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='4' AND orarend.oraid='8' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='4' AND orarend.oraid='8' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -1137,7 +1137,7 @@
             <td> <b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='5' AND orarend.oraid='8' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tantargy.nev FROM tantargy,orarend WHERE tantargy.id=orarend.tantargyid AND orarend.napid='5' AND orarend.oraid='8' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -1145,7 +1145,7 @@
            	</br></b>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='5' AND orarend.oraid='8' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanar.nev FROM tanar,orarend WHERE tanar.id=orarend.tanarid AND orarend.napid='5' AND orarend.oraid='8' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
@@ -1154,7 +1154,7 @@
             <i>
             	<?php
 					mysql_query('SET NAMES utf8');
-					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='5' AND orarend.oraid='8' AND orarend.osztalyid='$_POST[osztalyid]';");
+					$eredmeny=mysql_query("SELECT tanterem.nev FROM tanterem,orarend WHERE tanterem.id=orarend.tanteremid AND orarend.napid='5' AND orarend.oraid='8' AND orarend.osztalyid='".mysql_real_escape_string($_POST['osztalyid']."';");
                     while($r=mysql_fetch_assoc($eredmeny)){
                     echo $r['nev'];
                     }
